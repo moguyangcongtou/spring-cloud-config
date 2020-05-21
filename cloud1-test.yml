@@ -3,3 +3,12 @@ name1: cloud1-test
 
 server:
   port: 8090
+
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务的ip而不是服务器名称
+  client:
+    register-with-eureka: true #用Eureka注册服务
+    fetch-registry: true #下拉注册信息并复制一份到本地
+    service-url: 
+      defaultZone: http://localhost:8067/eureka #Eureka服务的位置
